@@ -1,0 +1,135 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+
+.content{
+    max-width: 1100px;
+}
+
+.title{
+    font-size: 5rem;
+    color: #fafafa;
+    animation: flipTitle 2s;
+}
+
+.search-container{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 30px 0;
+    display: flex;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+    
+}
+
+.search-container input{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    margin-right: 8px;
+    padding: 5px;
+    width: 100%;
+   
+}
+
+.search-container button{
+    margin-left: auto;
+}
+
+.search-container input::placeholder{
+    color: #f1f1f1;
+}
+
+.search-button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s;   
+}
+
+.search-button.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.search-button.enabled{
+    opacity: 1;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.search-button.enabled:hover{
+    transform: scale(1.2);
+}
+
+.main{
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    gap: 15px;
+    
+    animation: scaleMain 0.8s;
+}
+
+.main h2{
+    font-size: 3rem;
+}
+
+.main span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px){
+    .title{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .search-container, .main {
+        margin: 40px 20px;
+    } 
+
+    .main{
+        width: 90%;
+    }
+
+    .main h2{
+        font-size: 2rem;
+    }
+
+    
+}
+
+@keyframes flipTitle {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes scaleMain {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
