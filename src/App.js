@@ -2,6 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import './style.css';
 import { useState } from "react";
 import api from './services/api'
+import React from 'react';
 
 function App() {
   const [input, setInput] = useState('');
