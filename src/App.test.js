@@ -18,14 +18,14 @@ test("Verify if the input is being correctly formated", () => {
     expect(cepInput.value).toBe('53130-410');
 });
 
-test("Verify search button is enabled by default", () => {
+test("Verify search button is disabled by default", () => {
     render(<App />);
     const searchButton = screen.getByRole("button");
 
     expect(searchButton).toBeDisabled();
 });
 
-test("Verify te search button gets disabled when typing all the cep numbers", () => {
+test("Verify te search button gets enabled when typing all the cep numbers", () => {
     render(<App />)
 
     const searchButton = screen.getByRole("button");
